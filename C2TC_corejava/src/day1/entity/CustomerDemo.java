@@ -19,6 +19,10 @@ public class CustomerDemo {
 		System.out.println(c2.getCid());
 		System.out.println(c2.getCname());
 		System.out.println(c2.getCcity());
+		customer c3=new customer(104,"Om","Pondy");
+		System.out.println(c3);
+		customer c4=new customer("Hari","Ooty");
+		System.out.println(c4);
 	}
 
 }
