@@ -1,4 +1,4 @@
-package Day19;
+package Day13;
 
 public class ChildThread extends Thread {
 	private int n;
