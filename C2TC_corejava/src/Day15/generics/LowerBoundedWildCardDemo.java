@@ -1,25 +1,24 @@
 package Day15.generics;
 
-import java.util.Arrays;
-import java.util.List;
+
+import java.util.*;
 
 public class LowerBoundedWildCardDemo {
 
-	public static void main(String args[]) {
-		List<Integer> intList = Arrays.asList(1, 2, 3);
-		System.out.println("Display Integer values");
-		//Display List of Integers
-		LowerBoundedWildCard.displayNumbers(intList);
+    public static void addNumbers(List<? super Integer> list) {
+        for (int i = 1; i <= 5; i++) {
+            list.add(i);
+        }
 
-		List<Number> numberList = Arrays.asList(1.0, 2.0, 3.0,10,4,30);
-		System.out.println("Display Number values");
-		//Display List of Numbers
-		LowerBoundedWildCard.displayNumbers(numberList);
+        for (Object val : list) {
+            System.out.println(val);
+        }
+    }
 
-		
-		  List<Number> doubleList= Arrays.asList(1.0,2.0,3.0,9);
-		  System.out.println("Display Double values");
-		   displayNumbers(doubleList);
-		 
-	}
+    public static void main(String[] args) {
+
+        List<Number> list1 = new ArrayList<Number>();
+
+        addNumbers(list1);
+    }
 }

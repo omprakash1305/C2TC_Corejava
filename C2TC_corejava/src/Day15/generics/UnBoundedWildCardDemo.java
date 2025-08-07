@@ -1,25 +1,19 @@
 package Day15.generics;
 
-import java.util.Arrays;
-import java.util.List;
+
+
+import java.util.*;
 
 public class UnBoundedWildCardDemo {
 
-	public static void main(String[] args) {
-		List<Integer> intList = Arrays.asList(1, 2, 3);
-		System.out.println("Display Integer values");
-		//Display List of Integers
-		UnBoundedWildCard.display(intList);
+    public static void main(String[] args) {
 
-		List<String> strList = Arrays.asList("Hi", "Hello", "How are you");
-		System.out.println("Display String values");
-		//Display List of String
-		UnBoundedWildCard.display(strList);
-		
-		Person persons[]=new Person[] {new Person("Nitin", "Pune"), new Person("Manoj", "Mumbai"),new Person("Mayur", "Delhi")};
-		List<Person> personList = Arrays.asList(persons);
-		System.out.println("Display Person values");
-		//Display List of Persons
-		UnBoundedWildCard.display(personList);
-	}
+        List<Integer> list1 = Arrays.asList(1, 2, 3, 4);
+        List<String> list2 = Arrays.asList("One", "Two", "Three", "Four");
+
+        UnBoundedWildCard obj = new UnBoundedWildCard();
+
+        obj.printList(list1);
+        obj.printList(list2);
+    }
 }
